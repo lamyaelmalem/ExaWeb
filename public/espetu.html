@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -96,10 +97,11 @@
 </head>
 <body>
     <!-- Link Entry View -->
-    <div class="min-h-screen bg-primary-gradient p-8 flex items-center justify-center">
+    <div id="link-entry-view" class="min-h-screen bg-primary-gradient p-8 flex items-center justify-center">
       <div class="flex max-w-7xl w-full">
           <!-- Image à gauche -->
           <div class="flex-shrink-0 w-1/2">
+              <!-- Placeholder image - replace with your actual image path -->
               <img src="student-man-making-ok-sign.png" style="width: 450px; height: auto;" alt="Image" class="w-full h-auto rounded-lg shadow-xl">
           </div>
           
@@ -397,10 +399,14 @@
                     setTimeout(() => {
                         linkEntryView.classList.add('hidden');
                         examInterface.classList.remove('hidden');
+                        // Réinitialiser le bouton pour les tests futurs
+                        accessExamBtn.innerHTML = `<i class="fas fa-link mr-2"></i>Accéder à l'examen`;
+                        accessExamBtn.disabled = false;
                     }, 1500);
                 } else {
                     linkError.classList.remove('hidden');
                 }
+            });
             
             // Start exam button handler
             startExamBtn.addEventListener('click', function() {
@@ -474,14 +480,16 @@
                 currentQuestion = 1;
                 document.getElementById('question-number').textContent = currentQuestion;
                 document.getElementById('exam-link').value = '';
-                accessExamBtn.innerHTML = `<i class="fas fa-link mr-2"></i>Accéder à l'examen`;
-                accessExamBtn.disabled = false;
             });
             
             // Timer function
             function startTimer() {
                 const timerElement = document.getElementById('time-remaining');
                 const timerDisplay = document.getElementById('timer');
+                
+                // Reset timer styling
+                timerDisplay.classList.remove('timer-warning', 'bg-red-100', 'text-red-800');
+                timerDisplay.classList.add('bg-blue-100', 'text-blue-800');
                 
                 timerInterval = setInterval(() => {
                     timeLeft--;
@@ -507,6 +515,6 @@
                 return `${mins}:${secs}`;
             }
         });
-    </script>
+    </script> 
 </body>
 </html>
