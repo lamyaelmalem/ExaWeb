@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Résumé de l'examen</title>
+    <link rel="stylesheet" href="resume.css" />
+    <link rel="icon" href="icon.png" type="image/png" />
+    <script defer src="resume.js"></script>
+</head>
+
+<body>
+   
+    <div class="bubble top-left">
+        <strong>EXAWEB</strong>
+    </div>
+
+    
+    <div class="bubble top-right">
+        <img src="icon.png" alt="Logo" class="bubble-img" />
+    </div>
+
+    <!-- Bulle  prêt -->
+    <div class="bubble center">
+        ✅ Votre examen est prêt !
+    </div>
+
+    <div class="container">
+        <h2 id="examTitle">Titre de l'examen</h2>
+        <p><strong>Description :</strong> <span id="examDescription"></span></p>
+        <p><strong>Public cible :</strong> <span id="examAudience"></span></p>
+
+        <h3>Questions :</h3>
+        <ul id="examQuestions"></ul>
+
+        <button onclick="window.print()">Imprimer</button>
+    </div>
+</body>
+
+</html>

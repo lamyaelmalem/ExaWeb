@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Création de questions</title>
+    <link rel="stylesheet" href="ajout.css" />
+    <link rel="icon" href="icon.png" type="image/png" />
+    <script defer src="ajou.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="questionForm">
+            <h2>Ajouter une Question</h2>
+
+            <label for="type">Type de question :</label>
+            <select id="type" required>
+                <option value="directe">Directe</option>
+                <option value="qcm">QCM</option>
+            </select>
+
+            <label for="enonce">Énoncé :</label>
+            <textarea id="enonce" required></textarea>
+
+            <label for="note">Note :</label>
+            <input type="number" id="note" required min="1" />
+
+            <label for="duree">Durée (en secondes) :</label>
+            <input type="number" id="duree" required min="1" />
+
+            <div id="directeOptions">
+                <label for="reponse">Réponse :</label>
+                <input type="text" id="reponse" />
+
+                <label for="tolerance">Tolérance (%) :</label>
+                <input type="number" id="tolerance" min="0" max="100" />
+            </div>
+
+            <div id="qcmOptions" style="display: none;">
+                <label>Options QCM :</label>
+                <div id="qcmContainer"></div>
+                <button type="button" id="addOption">Ajouter une option</button>
+            </div>
+
+            <button type="submit">Ajouter la question</button>
+            <button type="button" id="finishExam">Terminer</button>
+        </form>
+
+        <ul id="questions"></ul>
+    </div>
+</body>
+
+</html>
