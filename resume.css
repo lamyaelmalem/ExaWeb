@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: rgba(107, 184, 226, 0.95);
+    color: #1a1a1a;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #044d75;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+h3 {
+    margin-top: 2rem;
+    color: #044d75;
+    border-bottom: 2px solid #044d75;
+    padding-bottom: 0.5rem;
+}
+
+#examQuestions {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+#examQuestions li {
+    background-color: #cfe4f3;
+    border-left: 5px solid #1e80d0;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#examQuestions li ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+#examQuestions li li {
+    list-style-type: disc;
+    margin-bottom: 0.3rem;
+}
+
+strong {
+    color: #0a4a6a;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p,
+    li {
+        font-size: 1rem;
+    }
+}
+
+.bubble {
+    position: absolute;
+    background-color: #ffffffee;
+    border-radius: 20px;
+    padding: 0.8rem 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    color: #2a2a2a;
+    z-index: 10;
+    animation: fadeInUp 1s ease;
+}
+
+.bubble-img {
+    width: 50px;
+    height: 50px;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.center {
+    top: 90px;
+    left: 64%;
+    transform: translateX(-50%);
+    background-color: #d4edda;
+    color: #155724;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media print {
+    body {
+        background-color: white !important;
+        color: #000 !important;
+    }
+
+    .container {
+        box-shadow: none;
+        background-color: white !important;
+        page-break-inside: avoid;
+    }
+
+    .bubble {
+        position: absolute !important;
+        background-color: #fff !important;
+        color: #000 !important;
+        box-shadow: none;
+    }
+
+    .bubble-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    button {
+        display: none !important;
+    }
+
+    #examQuestions li {
+        page-break-inside: avoid;
+    }
+     .center {
+            display: none !important;
+    }
+    }
