@@ -1,0 +1,233 @@
+body {
+     font-family: Arial, sans-serif;
+    background-image: url('img.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     margin: 0;
+    padding: 0;
+        
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form {
+    display: none;
+    flex-direction: column;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.toggle-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c757d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-buttons button:hover {
+    background-color: #5a6268;
+}
+
+.visible {
+    display: flex !important;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+}
+.header {
+    text-align: center;
+    background-color: rgba(0, 47, 95, 0.9);
+    color: white;
+    padding: 30px 10px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-section {
+    text-align: center;
+    margin: 50px auto;
+    padding: 40px 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+}
+
+.hero-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#start-now {
+    background-color: #ffc107;
+    color: black;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#start-now:hover {
+    background-color: #e0a800;
+}
+#btn-inscription,
+#btn-connexion {
+    background-color: #ffc107;
+    
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#btn-inscription:hover,
+#btn-connexion:hover {
+    background-color: #e0a800;
+    
+}
+
+/* Style des champs et du formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #004094;
+}
+
+/* Amélioration du conteneur */
+.container {
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    min-height: 400px;
+}
+form label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    font-size: 1.05em;
+    color: #003366;
+}
+
+form label i {
+    color: #003366;
+    font-size: 1.1em;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #004080;
+}

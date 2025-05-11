@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription / Connexion - EXaWeB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- En-tête bleue -->
+    <div class="header">
+        <h1>Bienvenue sur la plateforme EXaWeB</h1>
+    </div>
+
+    <!-- Section de motivation -->
+    <div class="hero-section">
+        <h2>Votre avenir commence ici</h2>
+        <p>Rejoignez une communauté d'apprenants et de formateurs sur une plateforme moderne, fiable et rapide.</p>
+        <button id="start-now">Commencer maintenant</button>
+    </div>
+
+    <!-- Boutons de bascule -->
+    <div class="toggle-buttons" style="display: none;" id="toggle-buttons">
+        <button id="btn-inscription">Inscription</button>
+        <button id="btn-connexion">Connexion</button>
+    </div>
+
+    <!-- Conteneur des formulaires -->
+    <div class="container" id="register-login" style="display: none;">
+
+        <!-- Formulaire d'inscription -->
+        <form id="registerForm">
+            <input name="nom" placeholder="Nom" required>
+            <input name="prenom" placeholder="Prénom" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <input name="password" type="password" placeholder="Mot de passe" required>
+            <input name="dateNaissance" type="date" required>
+            <select name="sexe" required>
+                <option value="">Sexe</option>
+                <option value="Homme">Homme</option>
+                <option value="Femme">Femme</option>
+            </select>
+            <input name="etablissement" placeholder="Établissement" required>
+            <input name="filiere" placeholder="Filière" required>
+            <select name="role" required>
+                <option value="">Rôle</option>
+                <option value="etudiant">Étudiant</option>
+                <option value="enseignant">Enseignant</option>
+            </select>
+            <button type="submit">S'inscrire</button>
+        </form>
+
+
+        <form id="loginForm">
+            <input name="email" type="email" placeholder="Email" required>
+            <input name="password" type="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const registerForm = document.getElementById("registerForm");
+            const loginForm = document.getElementById("loginForm");
+            const btnInscription = document.getElementById("btn-inscription");
+            const btnConnexion = document.getElementById("btn-connexion");
+            const startNowBtn = document.getElementById("start-now");
+            const toggleButtons = document.getElementById("toggle-buttons");
+            const container = document.getElementById("register-login");
+
+
+            registerForm.style.display = "none";
+            loginForm.style.display = "none";
+
+
+            startNowBtn.addEventListener("click", function () {
+                toggleButtons.style.display = "block";
+                container.style.display = "block";
+                btnInscription.click();
+                window.scrollTo({ top: container.offsetTop - 100, behavior: 'smooth' });
+            });
+
+
+            btnInscription.addEventListener("click", function (e) {
+                e.preventDefault();
+                registerForm.style.display = "flex";
+                loginForm.style.display = "none";
+            });
+
+
+            btnConnexion.addEventListener("click", function (e) {
+                e.preventDefault();
+                loginForm.style.display = "flex";
+                registerForm.style.display = "none";
+            });
+        });
+    </script>
+
+</body>
+
+</html>
